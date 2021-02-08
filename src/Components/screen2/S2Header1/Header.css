@@ -1,0 +1,66 @@
+.header{
+  background-color: blue;
+  background: rgba(246, 246, 246, 0.8);
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+}
+.header_name {
+  height: 24px;
+  padding-left: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+}
+.header__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__input {
+  width: 220px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border: 2px solid #f9f9f9;
+  border-radius: 68px;
+}
+.header__icon {
+  width: 40px;
+  /* background-color: grey; */
+  height: 40px;
+  padding-left: 10px;
+}
+.header__input__search {
+  width: 30px;
+  height: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  border-color: transparent;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.76);
+
+  opacity: 0.8;
+}
+
+.header__filter{
+  background-image: url("../../../AllIcons/bigCircle.png") no-repeat;
+margin: 0px 10px;
+height: 40px;
+width:40px;
+border-radius: 20px;
+background: #FFFFFF;
+border: 2px solid #FFFFFF;
+box-shadow: 8px 8px 16px rgba(209, 217, 230, 0.4);
+display: flex;
+justify-content: center;
+align-items: center;
+}

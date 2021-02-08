@@ -1,0 +1,101 @@
+.screen3__body1__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 20px;
+}
+.screen3__body1__header_approvals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.screen3__body1__header_date {
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+
+  color: #000000;
+}
+.screen3__body1__Names {
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 10px 20px;
+
+}
+.screen3__body1__brandName {
+  flex:1;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  color:  rgba(57, 129, 233, 0.76);
+
+
+}
+
+.screen3__body1__medicineTime {
+  flex:1;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  color:  rgba(57, 129, 233, 0.76);
+  flex: 1;
+width: 98px;
+height: 15px;
+
+
+}
+.screen3__body1__timeline {
+  flex:1;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  color:  rgba(57, 129, 233, 0.76);
+  flex: 1;
+
+
+}
+.screen3__body1__dose{
+  width: 49px;
+height: 16px;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+text-transform: capitalize;
+
+color: #3981E9;
+flex: 1;
+}
+.screen3__body1__emptySpace{
+  flex:1;
+}
+.screen3__body1__dates{
+  display: flex;
+  flex:1
+}
+.screen3__body1__date{
+  width: 32px;
+  height: 16px;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+
+color: rgba(0, 0, 0, 0.8);
+justify-content: space-between;
+margin: 0px 10px;
+margin-left: 15px;
+
+}
+.screen3__body1__lists{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}

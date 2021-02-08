@@ -1,0 +1,19 @@
+.customButton {
+  border: 1px solid rgba(57, 129, 233, 0.68);
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+}
+.customButtonText {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.68);
+}

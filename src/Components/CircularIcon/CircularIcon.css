@@ -1,0 +1,13 @@
+.circularIcon {
+    margin: 0px 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 8px 8px 16px rgba(209, 217, 230, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

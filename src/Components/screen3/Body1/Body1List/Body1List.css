@@ -1,0 +1,55 @@
+.screen3__body1__list {
+  display: flex;
+  margin: 10px 0px;
+  align-items: flex-start;
+}
+.screen3__body1__listElement1 {
+  flex: 1;
+}
+.screen3__body1__listElement1__name {
+  width: 135px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.8);
+}
+.screen3__body1__listElement1__quantity {
+  width: 42px;
+  height: 16px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.8);
+
+  opacity: 0.7;
+}
+.screen3__body1__listElement2 {
+  flex: 1;
+  width: 98px;
+  height: 19px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.8);
+}
+.screen3__body1__listElement3 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.screen3__body1__listElement3__arrow {
+  margin-left: 10px;
+}

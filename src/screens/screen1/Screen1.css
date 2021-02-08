@@ -1,0 +1,36 @@
+.screen1__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen1 {
+  margin: 120px;
+  border: 4px solid #f9f9f9;
+  box-shadow: 0px 8px 30px #d1d9e6;
+  border-radius: 0px 0px 8px 8px;
+  /* background-color: blue; */
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 56px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar body";
+  /* background-color: yellow; */
+  width: 100%;
+}
+.screen1__header {
+  grid-area: header;
+}
+
+.screen1__sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.screen1__body {
+  grid-area: body;
+  /* background-color: green; */
+}
