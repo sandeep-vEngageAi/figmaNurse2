@@ -11,7 +11,7 @@
 
 .row1__name {
   height: 15px;
-
+ flex:1;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -35,4 +35,7 @@ line-height: 16px;
 text-transform: uppercase;
 
 color: #3981E9;
+}
+.row1__status{
+  flex:0.5;
 }

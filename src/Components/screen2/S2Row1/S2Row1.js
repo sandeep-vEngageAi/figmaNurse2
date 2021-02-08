@@ -10,7 +10,7 @@ const Row1 = () => {
             <div className="row1__name">QR CODE</div>
             <div className="row1__name">HOSPITAL ID</div>
             <div className="row1__name">DISCHARGE STATUS</div>
-            <div className="row1__name">STATUS</div>
+            <div className="row1__status">STATUS</div>
         </div>
     )
 }

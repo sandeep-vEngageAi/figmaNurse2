@@ -6,7 +6,8 @@ import medicalReportS3 from "../../AllIcons/medicalReportS3.png";
 import detailsS3 from "../../AllIcons/detailsS3.png";
 import electrocardiogramIcon from "../../AllIcons/electrocardiogram.png";
 import phoneCallIcon from "../../AllIcons/phoneCallS3.png";
-import Body1 from "../../Components/screen3/Body1/Body1";
+import Body1 from "../../Components/screen3/medication/Body1/Body1";
+import Body2 from "../../Components/screen3/medication/Body2/Body2";
 import Screen3Column2 from "../../Components/screen3/Screen3Column2/Scree3Column2";
 
 const Screen3 = () => {
@@ -64,10 +65,12 @@ const Screen3 = () => {
               BGColor="#3981E9"
               COLOR="#FFFFFF"
               OPACITY="1"
+              name="Medication Schedules"
             />
           </div>
           <div className="screen3__body">
-            <Body1 />
+            {/* <Body1 /> */}
+            <Body2 />
           </div>
         </div>
         <Screen3Column2 />

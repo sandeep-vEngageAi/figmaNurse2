@@ -1,6 +1,6 @@
 import React from "react";
-import CircularIcon from "../../../CircularIcon/CircularIcon";
-import keyboardArrowS3 from '../../../../AllIcons/keyboardArrowS3.png'
+import CircularIcon from "../../../../CircularIcon/CircularIcon";
+import keyboardArrowS3 from '../../../../../AllIcons/keyboardArrowS3.png'
 import './Body1List.css'
 const Body1List = (props) => {
   return (

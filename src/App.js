@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="app__container">
       <p className="vEngageLogoClass">
-        <img style={{height:"100%",objectFit:"contain"}} src="https://lh3.googleusercontent.com/P5HdyDEA_1W5PJ3d12bO7Qyks7hITUNl_joUu31atU48sDGm7UyFnPfEbXr1CxLsJG4H=s104" />
+        <img style={{width:"70px",objectFit:"contain"}} src="https://lh3.googleusercontent.com/P5HdyDEA_1W5PJ3d12bO7Qyks7hITUNl_joUu31atU48sDGm7UyFnPfEbXr1CxLsJG4H=s104" />
        </p>
       {/* <Screen1 /> */}
       {/* <Screen2 /> */}

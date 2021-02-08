@@ -1,0 +1,63 @@
+.screen3__body2__header {
+  display: flex;
+  justify-content: space-between;
+}
+.screen3__body2__header_name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.screen3__body2__horizontalLine1 {
+  width: 439px;
+  height: 0px;
+  border: 0.5px solid rgba(57, 129, 233, 0.4);
+  transform: rotate(180deg);
+}
+.screen3__body2__choices{
+    display: flex;
+    flex-direction: column;
+}
+.screen3__body2__name {
+  size: 12px;
+  /* identical to box height */
+
+  color: rgba(57, 129, 233, 0.76);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.screen3__body2__brandName{
+
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.68);
+}
+
+.screen3__body2__buttons{
+    display: flex;
+    margin-top: 20px;
+}
+.screen3__body2__substituteButton{
+    margin-right: 20px;
+}
+.screen3__body2__horizontalLine2{
+width: 439px;
+height: 0px;
+border: 0.2px solid rgba(57, 129, 233, 0.4);
+transform: rotate(180deg);
+margin-top: 20px;
+}

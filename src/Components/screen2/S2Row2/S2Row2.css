@@ -8,47 +8,50 @@
   align-items: center;
   padding: 0px 15px;
 }
-.row2_cell1 {
+.S2row2__cell1 {
   height: 15px;
-
+  flex:1;
+  
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;
   /* identical to box height */
-
+  
   color: rgba(0, 0, 0, 0.76);
 }
-.row2__dob {
+.S2row2__dob {
   width: 71px;
   height: 16px;
-
+  
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-
+  
   color: rgba(0, 0, 0, 0.8);
-
+  
   opacity: 0.7;
 }
 
-.row2__cell2 {
+.S2row2__cell2 {
   height: 19px;
-
+  flex:1;
+  
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
   /* identical to box height */
-
+  
   color: rgba(0, 0, 0, 0.8);
 }
 
-.row2__cell4 {
+.S2row2__cell4 {
+  flex:1;
   height: 32px;
   width: 81px;
   background: rgba(255, 158, 158, 0.8);
@@ -57,27 +60,28 @@
   justify-content: center;
   align-items: center;
 }
-.row2__cell4__text {
+.S2row2__cell4__text {
   text-align: center;
-
+  
   height: 16px;
-
+  
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   text-transform: capitalize;
-
+  
   color: rgba(0, 0, 0, 0.8);
 }
 
-.row2__cell5 {
+.S2row2__cell5 {
+  flex:0.5;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.row2__cell5_1 {
+.S2row2__cell5_1 {
   background-image: url("../../../AllIcons/bigCircle.png") no-repeat;
   margin: 0px 10px;
   height: 40px;

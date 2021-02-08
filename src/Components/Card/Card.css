@@ -1,8 +1,8 @@
 .card {
-  width: 180px;
   height: 88px;
   min-height: 70px;
   max-height: 100%;
+  width: 90%;
   background: #ffffff;
   border: 2px solid #f9f9f9;
   box-shadow: 0px 4px 10px #d1d9e6;

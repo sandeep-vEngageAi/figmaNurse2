@@ -1,9 +1,9 @@
 import React from "react";
-import telephoneS3 from "../../../AllIcons/telephoneS3.png";
-import CircularIcon from '../../../Components/CircularIcon/CircularIcon';
+import telephoneS3 from "../../../../AllIcons/telephoneS3.png";
+import CircularIcon from '../../../CircularIcon/CircularIcon';
 import Body1List from './Body1List/Body1List';
 import "./Body1.css";
-import CustomButton1 from '../../Buttons/customButton1/CustomButton1';
+import CustomButton1 from '../../../Buttons/customButton1/CustomButton1';
 const Body1 = () => {
   return (
     <div>

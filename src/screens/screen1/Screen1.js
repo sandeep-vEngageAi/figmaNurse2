@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "../../Components/Card/Card";
-import Row1 from "../../Components/screen1/S1Row1/Row1";
-import Row2 from "../../Components/screen1/S1Row2/Row2";
 import alertImgIcon from "../../AllIcons/alertImg.png";
 import medicalReport from "../../AllIcons/medicalReport.png";
 import electrocardiogramIcon from "../../AllIcons/electrocardiogram.png";
 import phoneCallIcon from "../../AllIcons/phone-call.png";
 import Header1 from "../../Components/screen1/S1Header1/Header1";
-import './Screen1.css'
+import PatientAlerts from "./PatientAlerts/PatientAlerts";
+import RoutineCalls from './RoutineCalls/RoutineCalls';
+import "./Screen1.css";
 const Screen1 = () => {
   return (
     <div className="screen1__container">
@@ -16,7 +16,6 @@ const Screen1 = () => {
           <Header1 />
         </div>
         <div className="screen1__sidebar">
-            
           <Card
             SRC={alertImgIcon}
             name="Patient Alerts"
@@ -29,14 +28,8 @@ const Screen1 = () => {
           <Card SRC={phoneCallIcon} name="Routine Calls" />
         </div>
         <div className="screen1__body">
-          <Row1 />
-          <Row2 />
-          <Row2 />
-          <Row2 />
-          <Row2 />
-          <Row2 />
-          <Row2 />
-          <Row2 />
+          {/* <PatientAlerts /> */}
+          <RoutineCalls />
         </div>
       </div>
     </div>
