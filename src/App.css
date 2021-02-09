@@ -5,21 +5,34 @@
 body{
   height:100%;
   width:100%;
+  box-sizing: border-box;
   /* background: red; */
+}
+.vEnagageNavbar{
+  /* position:absolute; */
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  z-index: 3;
+  
 }
 .vEngageLogoClass{
   margin:10px 0px 0px 10px;
   width:50px;
   max-width: 100px;
   /* box-shadow: 0px 8px 30px #d1d9e6; */
- z-index: 3;
-  position:absolute;
 
 }
 
 .app__container{
   height: 100vh;
   width:100vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
   
 }
 
+.app__body__content{
+  flex:1;
+}

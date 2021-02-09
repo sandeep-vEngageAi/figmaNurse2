@@ -19,13 +19,16 @@ const Screen1 = () => {
           <Card
             SRC={alertImgIcon}
             name="Patient Alerts"
-            BGColor="#3981E9"
-            COLOR="#FFFFFF"
-            OPACITY="1"
+            
           />
           <Card SRC={medicalReport} name="Cases for Review" />
           <Card SRC={electrocardiogramIcon} name="Monitoring Capsules" />
-          <Card SRC={phoneCallIcon} name="Routine Calls" />
+          <Card SRC={phoneCallIcon} name="Routine Calls" 
+          BGColor="#3981E9"
+          COLOR="#FFFFFF"
+          OPACITY="1"
+          
+          />
         </div>
         <div className="screen1__body">
           {/* <PatientAlerts /> */}

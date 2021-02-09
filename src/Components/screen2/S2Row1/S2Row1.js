@@ -5,7 +5,7 @@ const Row1 = () => {
         <div className="row1">
             <div className="row1__name">
                 <p>PATIENT NAME</p>
-                <p className="row1__name__dob">(DOB)</p>
+                <p className="row1__name__dob">(age)</p>
                 </div>
             <div className="row1__name">QR CODE</div>
             <div className="row1__name">HOSPITAL ID</div>

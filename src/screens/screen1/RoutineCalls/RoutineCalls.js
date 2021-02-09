@@ -8,15 +8,17 @@ const RoutineCalls = () => {
   const fetchedDataFunc = () => {
     setLoading(true);
     try {
-      fetch("http://ba7ef1eb8405.ngrok.io/api/getPatientDepartmentDetails/get", {
+      fetch(`${process.env.REACT_APP_SCREEN1_URL}/api/getPatientDepartmentDetails/get`, {
         method: "GET",
       })
         .then((res) => {
           setLoading(false);
-          console.log(res);
           return res.json();
         })
-        .then((result) => setFectchedData(result));
+        .then((result) => {
+          console.log("DISCHARGE",result);
+          setFectchedData(result)
+        });
     } catch (err) {
       console.log("ERROR OCCURED", err);
     }
@@ -30,10 +32,10 @@ const RoutineCalls = () => {
     return (
       <Row2
         key={index}
-        name={item["Patient Name"]}
-        dischargeDate={item["Discharge Date"]}
-        dischargeDiagnosis={item["Diagnosis"]}
-        alert={item["Department"]}
+        name={item["patientName"]}
+        dischargeDate={item["dischargeDate"]}
+        dischargeDiagnosis={item["diagnosis"]}
+        department={item["department"]}
       />
     );
   });

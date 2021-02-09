@@ -4,11 +4,12 @@ import mobilephoneS2 from "../../../AllIcons/mobilephoneS2.png";
 import aLetterIcon from "../../../AllIcons/aLetter.png";
 import verifyS2  from '../../../AllIcons/verifyS2.png'
 const Row2 = (props) => {
+ 
   return (
     <div className="row2">
       <div className="S2row2__cell1">
         <p>{props.name}</p>
-        <p className="S2row2__dob">July 19,1992</p>
+        <p className="S2row2__dob">{`${props.age} years`}</p>
       </div>
       <div className="S2row2__cell2">{props.QRCode}</div>
       <div className="S2row2__cell2">{props.hospitalID}</div>

@@ -1,19 +1,32 @@
 import "./App.css";
 import React from "react";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import Screen1 from "./screens/screen1/Screen1";
-import Screen2 from './screens/screen2/Screen2';
-import Screen3 from './screens/screen3/Screen3';
-import Screen4 from './screens/screen4/Screen4'
+import Screen2 from "./screens/screen2/Screen2";
+import Screen3 from "./screens/screen3/Screen3";
+import Screen4 from "./screens/screen4/Screen4";
+import { useAuth0 } from "@auth0/auth0-react";
+import NavigationItems from "./Navigation/NavigationItems/NavigationItems";
 function App() {
+  const { isAuthenticated } = useAuth0();
+  let routes = null;
+  if (isAuthenticated) {
+    routes = (
+      <Switch>
+        <Route path="/ds-upload" component={Screen2} />
+        <Route path="/monitoring-capsule" component={Screen3} />
+        <Route path="/" component={Screen1} />
+        <Redirect to="/" />
+      </Switch>
+    );
+  }
+
   return (
     <div className="app__container">
-      <p className="vEngageLogoClass">
-        <img style={{width:"70px",objectFit:"contain"}} src="https://lh3.googleusercontent.com/P5HdyDEA_1W5PJ3d12bO7Qyks7hITUNl_joUu31atU48sDGm7UyFnPfEbXr1CxLsJG4H=s104" />
-       </p>
-      {/* <Screen1 /> */}
-      {/* <Screen2 /> */}
-      <Screen3 />
-      {/* <Screen4 /> */}
+      <div className="vEngageNavbar">
+        <NavigationItems />
+      </div>
+      <div className="app__body__content">{routes}</div>
     </div>
   );
 }

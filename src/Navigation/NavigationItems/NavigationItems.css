@@ -1,0 +1,14 @@
+.vEngageLogoNavigation{
+  display: flex;
+  justify-content: space-between;
+  margin:5px 20px;
+}
+
+.NavigationItems {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+

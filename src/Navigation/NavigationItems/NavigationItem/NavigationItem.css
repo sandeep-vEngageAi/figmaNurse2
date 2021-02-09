@@ -1,0 +1,18 @@
+.NavigationItem {
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+.NavigationItem a {
+    color: #8F5C2C;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    color: #40A4C8;
+}
+
