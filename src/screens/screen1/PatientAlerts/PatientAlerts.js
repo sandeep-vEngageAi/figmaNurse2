@@ -1,6 +1,6 @@
 import React from "react";
-import Row1 from '../../../Components/screen1/S1Row1/Row1';
-import Row2 from '../../../Components/screen1/S1Row2/Row2';
+import Row1 from '../../../Components/screen1/patientAlerts/PAColNames/PAColNames'
+import Row2 from '../../../Components/screen1/patientAlerts/PARowData/PARowData'
 const PatientAlerts = (props) => {
   return (
     <div>

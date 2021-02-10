@@ -1,7 +1,6 @@
 import React from "react";
 import "./S2Row2.css";
 import mobilephoneS2 from "../../../AllIcons/mobilephoneS2.png";
-import aLetterIcon from "../../../AllIcons/aLetter.png";
 import verifyS2  from '../../../AllIcons/verifyS2.png'
 const Row2 = (props) => {
  

@@ -69,8 +69,8 @@ const Screen3 = () => {
             />
           </div>
           <div className="screen3__body">
-            {/* <Body1 /> */}
-            <Body2 />
+            <Body1 />
+            {/* <Body2 /> */}
           </div>
         </div>
         <Screen3Column2 />

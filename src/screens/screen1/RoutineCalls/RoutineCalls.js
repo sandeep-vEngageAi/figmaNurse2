@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Row1 from "../../../Components/screen1/S1Row1/Row1";
-import Row2 from "../../../Components/screen1/S1Row2/Row2";
+import Row1 from "../../../Components/screen1/RoutineCalls/RCColNames/RCColNames";
+import Row2 from "../../../Components/screen1/RoutineCalls/RCRowData/RCRowData";
 
 const RoutineCalls = () => {
   const [fetchedData, setFectchedData] = useState([]);
@@ -42,7 +42,7 @@ const RoutineCalls = () => {
   return (
     <div>
       <Row1 />
-     
+     <Row2 />
       {renderedData}
      
     </div>

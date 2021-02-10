@@ -1,6 +1,6 @@
 import React from "react";
     
-import "./Row1.css";
+import "./MCColNames.css";
 
 const Row1 = (props) => {
   return (

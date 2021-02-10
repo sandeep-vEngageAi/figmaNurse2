@@ -1,7 +1,7 @@
 import React from "react";
-import "./Row2.css";
-import whatsappIcon from "../../../AllIcons/whatsappIcon.png";
-import aLetterIcon from "../../../AllIcons/aLetter.png";
+import "./MCRowData.css";
+import whatsappIcon from "../../../../AllIcons/whatsappIcon.png";
+import aLetterIcon from "../../../../AllIcons/aLetter.png";
 const Row2 = (props) => {
 let dischargedDate = props.dischargeDate;
 if(dischargedDate == "" || dischargedDate ==null || dischargedDate ==undefined){

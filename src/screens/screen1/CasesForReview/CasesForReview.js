@@ -1,6 +1,6 @@
 import React from "react";
-import Row1 from '../../../Components/screen1/S1Row1/Row1';
-import Row2 from '../../../Components/screen1/S1Row2/Row2';
+import Row1 from "../../../Components/screen1/CasesForReviews/CFRColNames/CFRColNames";
+import Row2 from "../../../Components/screen1/CasesForReviews/CFRRowData/CFRRowData";
 
 const CasesForReview = () => {
   return (

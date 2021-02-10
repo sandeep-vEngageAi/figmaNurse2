@@ -1,11 +1,14 @@
 import React from 'react'
-import Row1 from '../../../Components/screen1/S1Row1/Row1';
-import Row2 from '../../../Components/screen1/S1Row2/Row2';
+import Row1 from '../../../Components/screen1/MonitoringCapsules/MCColNames/MCColNames';
+import Row2 from '../../../Components/screen1/MonitoringCapsules/MCRowData/MCRowData';
 
 const MonitoringCapsules = () => {
     return (
         <div>
-            
+            <Row1 />
+            <Row2 />
+            <Row2 />
+            <Row2 />
         </div>
     )
 }
