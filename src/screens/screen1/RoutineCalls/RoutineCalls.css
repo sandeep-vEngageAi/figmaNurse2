@@ -1,4 +1,4 @@
-.S2Routine {
+.S1Routine {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 56px 1fr;
@@ -6,16 +6,16 @@
     "bodyHeader"
     "bodyContent";
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
 }
-.S2RoutineHeader {
+.S1RoutineHeader {
   grid-area: bodyHeader;
 }
-.S2RoutineContent {
+.S1RoutineContent {
   grid-area: bodyContent;
   overflow: scroll;
 }
 
-.S2RoutineContent::-webkit-scrollbar {
+.S1RoutineContent::-webkit-scrollbar {
   display: none;
 }

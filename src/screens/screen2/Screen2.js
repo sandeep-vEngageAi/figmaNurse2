@@ -75,22 +75,6 @@ const Screen2 = () => {
           <div className="S2bodyContent">{renderedData}</div>
         </div>
         <div className="sidebarS2">
-          {/* <div className="sidebarS2__heading">Upload Discharge Summary</div>
-          <div className="sidebarS2__addfiles">
-            <img src={addfiles} />
-          </div>
-          <div className="sidebarS2__chooseFile">
-            <p>Choose a file or drag it here</p>
-            <p>
-              <img src={swipeS2} />
-            </p>
-          </div>
-          <div className="sidebarS2__upload">
-            <p>
-              <img src={imgUpload} />
-            </p>
-            <p>Upload</p>
-          </div> */}
           <FileUpload />
 
         </div>

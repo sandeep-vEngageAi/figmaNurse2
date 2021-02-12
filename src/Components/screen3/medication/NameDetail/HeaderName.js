@@ -24,7 +24,6 @@ const HeaderName = () => {
       // .then(handleErrors)
         .then((res) => {
           setLoading(false);
-          console.log(res);
           return res.json();
         })
         .then((result) => {

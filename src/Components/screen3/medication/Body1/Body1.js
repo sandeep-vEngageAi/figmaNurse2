@@ -53,7 +53,7 @@ const Body1 = () => {
   });
 
   return (
-    <div>
+    <div className="screen3__body1__container">
       <div className="screen3__body1__header">
         <div className="screen3__body1__header_date">Discharge date</div>
         <div className="screen3__body1__header_approvals">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Row1 from "../../../Components/screen1/RoutineCalls/RCColNames/RCColNames";
 import Row2 from "../../../Components/screen1/RoutineCalls/RCRowData/RCRowData";
-
+import './RoutineCalls.css'
 const RoutineCalls = () => {
   const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -58,11 +58,11 @@ const RoutineCalls = () => {
     );
   });
   return (
-    <div className="S2Routine">
-      <div className="S2RoutineHeader">
+    <div className="S1Routine">
+      <div className="S1RoutineHeader">
         <Row1 />
       </div>
-      <div className="S2RoutineContent">
+      <div className="S1RoutineContent">
         {renderedData}
         </div>
     </div>
