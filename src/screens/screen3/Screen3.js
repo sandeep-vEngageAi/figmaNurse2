@@ -29,7 +29,7 @@ const Screen3 = () => {
             <div className="screen3__firstLine__rows">
               <div className="screen3__firstLine__row1">
                 <p className="line_alignment">Full Name</p>
-                <p className="line_alignment">DOB</p>
+                <p className="line_alignment">Age</p>
                 <p className="line_alignment">MRN</p>
                 <p className="line_alignment">Discharge Context</p>
                 <p className="line_alignment">Medical devices</p>
