@@ -8,7 +8,7 @@ const Row2 = (props) => {
     <div className="row2">
       <div className="S2row2__cell1">
         <p>{props.name}</p>
-        <p className="S2row2__dob">{`${props.age} years`}</p>
+        <p className="S2row2__dob">{`${props.age}`}</p>
       </div>
       <div className="S2row2__cell2">{props.QRCode}</div>
       <div className="S2row2__cell2">{props.hospitalID}</div>

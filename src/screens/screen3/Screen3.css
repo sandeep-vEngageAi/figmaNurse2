@@ -107,5 +107,16 @@
 
 .screen3__body {
   grid-area: body;
+  overflow: scroll;
+  flex-grow: 1;
+  /* height: 100%; */
+  min-height: 400px;
+  max-height: 400px;
+  height: 400px;
+
 }
+.screen3__body::-webkit-scrollbar{
+  display: none;
+}
+
 

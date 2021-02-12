@@ -8,9 +8,8 @@ const Row1 = (props) => {
       <div className="row1__name">PATIENT NAME</div>
       <div className="row1__name">Discharge date</div>
       <div className="row1__name">DISCHARGE DIAGNOSIS</div>
-      {/* <div className="row1__name">ALERT</div> */}
       <div className="row1__name">DEPARTMENT</div>
-      <div className="row1__status">STATUS</div>
+      <div className="row1__status">TIME SINCE DISCHARGE</div>
     </div>
   );
 };

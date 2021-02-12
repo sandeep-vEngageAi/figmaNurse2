@@ -1,10 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import telephoneS3 from "../../../../AllIcons/telephoneS3.png";
-import CircularIcon from '../../../CircularIcon/CircularIcon';
-import Body1List from './Body1List/Body1List';
+import CircularIcon from "../../../CircularIcon/CircularIcon";
+import Body1List from "./Body1List/Body1List";
 import "./Body1.css";
-import CustomButton1 from '../../../Buttons/customButton1/CustomButton1';
+import CustomButton1 from "../../../Buttons/customButton1/CustomButton1";
 const Body1 = () => {
+  const [fetchedData, setFectchedData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const fetchedDataFunc = () => {
+    setLoading(true);
+      var requestOptions = {
+        method: "POST",
+        body: JSON.stringify({
+          "qr_code": "JSWJZU"
+        }),
+        
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+      };
+    try {
+      fetch(
+        `${process.env.REACT_APP_SCREEN2_URL}/api/v1/getPatientMedicineDetails`,requestOptions)
+        .then((res) => {
+          setLoading(false);
+          console.log(res);
+          return res.json();
+        })
+        .then((result) => {
+          
+          // console.log("MedicalResponse",result);
+          if (Array.isArray(result) === true) {
+            setFectchedData(result);
+          }
+        });
+    } catch (err) {
+      console.log("ERROR OCCURED", err);
+    }
+  };
+  useEffect(() => {
+    fetchedDataFunc();
+  }, []);
+  let renderedData = [];
+
+  renderedData = fetchedData.map((item, index) => {
+    return (
+      <Body1List
+        key={index}
+        medicineName={item["medicineName"]}
+        dosage={item["dosage"]}
+        frequency={item["frequency"]}
+      />
+    );
+  });
+
   return (
     <div>
       <div className="screen3__body1__header">
@@ -33,10 +80,7 @@ const Body1 = () => {
         </div>
       </div>
       <div className="screen3__body1__lists">
-       <Body1List elementBGColor="#F9F7FD" />
-       <Body1List elementBGColor="#F9F7FD" />
-       <Body1List elementBGColor="#F9F7FD" />
-       <Body1List elementBGColor="#F9F7FD" />
+        {renderedData}
       </div>
     </div>
   );

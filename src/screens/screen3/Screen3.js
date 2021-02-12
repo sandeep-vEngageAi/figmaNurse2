@@ -9,7 +9,8 @@ import phoneCallIcon from "../../AllIcons/phoneCallS3.png";
 import Body1 from "../../Components/screen3/medication/Body1/Body1";
 import Body2 from "../../Components/screen3/medication/Body2/Body2";
 import Screen3Column2 from "../../Components/screen3/Screen3Column2/Scree3Column2";
-
+import NameDetail from '../../Components/screen3/medication/NameDetail/NameDetail';
+import HeaderName from '../../Components/screen3/medication/NameDetail/HeaderName'
 const Screen3 = () => {
   return (
     <div className="screen3__container">
@@ -33,25 +34,8 @@ const Screen3 = () => {
                 <p className="line_alignment">Discharge Context</p>
                 <p className="line_alignment">Medical devices</p>
               </div>
-              <div className="screen3__firstLine__row2">
-                <p
-                  className="line_alignment"
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
-                  <p>Sahil Karia</p>
-                  <p>(M)</p>
-                </p>
-                <p
-                  className="line_alignment"
-                  style={{ display: "flex", flexDirection: "column" }}
-                >
-                  <p>July 19, 1992</p>
-                  <p>(age 23)</p>
-                </p>
-                <p className="line_alignment">CAMNp021</p>
-                <p className="line_alignment">Post Angioplasty</p>
-                <p className="line_alignment">None</p>
-              </div>
+              {/* <NameDetail /> */}
+              <HeaderName />
             </div>
           </div>
           <div className="screen3__sidebar">

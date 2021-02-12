@@ -15,4 +15,18 @@
 .NavigationItem a.active {
     color: #40A4C8;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
+.active{
+    text-decoration: none;
+    color: white;
+}
+.active .card{
+    background-color: orange;
+    color:white;
+}
+.active .card{
+    text-decoration: none;
+}

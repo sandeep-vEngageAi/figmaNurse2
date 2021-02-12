@@ -13,6 +13,7 @@ const PatientAlerts = (props) => {
        status="" />
       <Row2 />
       <Row2 />
+      shubham
       <Row2 />
       <Row2 />
     </div>

@@ -1,0 +1,21 @@
+.S2Routine {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 56px 1fr;
+  grid-template-areas:
+    "bodyHeader"
+    "bodyContent";
+  width: 100%;
+  /* height: 100%; */
+}
+.S2RoutineHeader {
+  grid-area: bodyHeader;
+}
+.S2RoutineContent {
+  grid-area: bodyContent;
+  overflow: scroll;
+}
+
+.S2RoutineContent::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,43 @@
+.fileSelectS2__container {
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.fileSelectS2_heading {
+  height: 24px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  
+  align-self: center;
+  color: rgba(57, 129, 233, 0.68);
+}
+
+.fileSelectS2_addfiles {
+  align-self: center;
+}
+.fileSelectS2_addfiles__image {
+  width: 100;
+  object-fit: contain;
+}
+
+.fileSelectS2_chooseFile {
+  display: flex;
+  justify-content: space-between;
+}
+.fileSelectS2_upload {
+  background: rgba(57, 129, 233, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 60%;
+}

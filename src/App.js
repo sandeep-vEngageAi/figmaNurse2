@@ -26,7 +26,9 @@ function App() {
       <div className="vEngageNavbar">
         <NavigationItems />
       </div>
-      <div className="app__body__content">{routes}</div>
+      <div className="app__body__content">
+        {routes}
+        </div>
     </div>
   );
 }

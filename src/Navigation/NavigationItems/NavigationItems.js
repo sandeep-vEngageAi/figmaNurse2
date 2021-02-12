@@ -3,13 +3,12 @@ import React from "react";
 import "./NavigationItems.css";
 import NavigationItem from "./NavigationItem/NavigationItem";
 import LogoutButton from "../../Authentication/LogoutButton";
+import VEngageLogoFile from './vEngageLogoFile';
 const navigationItems = (props) => (
   <div className="vEngageLogoNavigation">
     <div>
-      <img
-        style={{ width: "70px", objectFit: "contain" }}
-        src="https://lh3.googleusercontent.com/P5HdyDEA_1W5PJ3d12bO7Qyks7hITUNl_joUu31atU48sDGm7UyFnPfEbXr1CxLsJG4H=s104"
-      />
+    <VEngageLogoFile />
+    
     </div>
     <div className="NavigationItems">
       <NavigationItem link="/" exact>
@@ -22,6 +21,7 @@ const navigationItems = (props) => (
       <LogoutButton />
     </div>
   </div>
+  
 );
 
 export default navigationItems;
