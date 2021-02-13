@@ -1,11 +1,13 @@
-import { ADD_FILES, FILES_ADDED,FILE_SENT, FILE_SENT_FAILURE,FILE_UPLOADING} from "./actionTypes";
+import { ADD_FILES, FILES_ADDED,FILE_SENT, FILE_SENT_FAILURE,FILE_UPLOADING,FETCH_AGAIN, SET_QRCODE} from "./actionTypes";
 
 const initialState = {
   files: {},
   uploaded:false,
   added:false,
   error:false,
-  uploading:false
+  uploading:false,
+  fetchAgain:false,
+  QRCode:''
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,11 +21,12 @@ const reducer = (state = initialState, action) => {
         }
     case FILE_SENT:
         return{
-            files: [],
+          ...state,
+            // files: [],
             uploaded:false,
             added:false,
             error:false,
-            uploading:false
+            uploading:false,
         }
     case FILE_SENT_FAILURE:
         return{
@@ -33,6 +36,14 @@ const reducer = (state = initialState, action) => {
     case FILE_UPLOADING:
       return{
         ...state, uploading:action.uploadingStatus
+      }
+    case FETCH_AGAIN:
+      return{
+        ...state,fetchAgain:action.fetchingStatus
+      }
+    case SET_QRCODE:
+      return{
+        ...state,QRCode:action.updatedQRCode
       }
     default:
       return state;

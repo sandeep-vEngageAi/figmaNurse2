@@ -2,49 +2,50 @@ import React, { useState, useEffect } from "react";
 import Row1 from "../../Components/screen2/S2Row1/S2Row1";
 import Row2 from "../../Components/screen2/S2Row2/S2Row2";
 import Header1 from "../../Components/screen2/S2Header1/Header";
-import addfiles from "../../AllIcons/addFilesS2.png";
-import swipeS2 from "../../AllIcons/swipeS2.png";
-import imgUpload from "../../AllIcons/uploadS2.png";
-import FileUpload from '../../Components/screen2/FileUpload/FileUpload';
+import FileUpload from "../../Components/screen2/FileUpload/FileUpload";
+import { connect } from "react-redux";
+import { fetchingAgain } from "../../Store/action";
 import "./Screen2.css";
-const Screen2 = () => {
+const Screen2 = (props) => {
   const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
   function handleErrors(response) {
     console.log("ERROR", response);
     if (!response.ok) {
-    }else if(Array.isArray(response.json()) != true){
+    } else if (Array.isArray(response.json()) != true) {
       throw Error(response.statusText);
-      
     }
     return response;
   }
   const fetchedDataFunc = () => {
     setLoading(true);
     try {
-      fetch(
-        `${process.env.REACT_APP_SCREEN2_URL}/api/v1/getDischargeDetails`,
-        {
-          method: "GET",
-        }
-      )
-      // .then(handleErrors)
+      fetch(`${process.env.REACT_APP_SCREEN2_URL}/api/v1/getDischargeDetails`, {
+        method: "GET",
+      })
         .then((res) => {
           setLoading(false);
           console.log(res);
           return res.json();
         })
         .then((result) => {
-          if(Array.isArray(result)===true){
+          if (Array.isArray(result) === true) {
             setFectchedData(result);
-
           }
-        })
-
+        });
     } catch (err) {
       console.log("ERROR OCCURED", err);
     }
   };
+  let fetchingStatus = props.fetchingStatus;
+  useEffect(() => {
+    if(fetchingStatus ===true){
+      fetchedDataFunc();
+      props.fetchingStatusToFalseFunc(false)
+    }
+  }, [fetchingStatus]);
+
+
   useEffect(() => {
     fetchedDataFunc();
   }, []);
@@ -76,11 +77,21 @@ const Screen2 = () => {
         </div>
         <div className="sidebarS2">
           <FileUpload />
-
         </div>
       </div>
     </div>
   );
 };
 
-export default Screen2;
+const mapStateToProps = (state) => {
+  return {
+    fetchingStatus: state.fetchAgain,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchingStatusToFalseFunc: () => dispatch(fetchingAgain(false)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Screen2);

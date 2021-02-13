@@ -5,17 +5,7 @@ import './RoutineCalls.css'
 const RoutineCalls = () => {
   const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
-  function handleErrors(response) {
-    console.log("ERROR", response);
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    else if(typeof(response.json()) != Array){
-      throw Error(response.statusText);
-
-    }
-    return response;
-  }
+  
   const fetchedDataFunc = () => {
     setLoading(true);
     try {
@@ -25,7 +15,6 @@ const RoutineCalls = () => {
           method:"GET"
         }
       )
-        // .then(handleErrors)
         .then((res) => {
           setLoading(false);
           return res.json();

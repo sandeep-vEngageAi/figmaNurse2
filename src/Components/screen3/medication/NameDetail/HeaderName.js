@@ -1,17 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import NameDetail from './NameDetail';
-const HeaderName = () => {
+import { connect } from "react-redux";
+import {setQRCodeFunc} from '../../../../Store/action';
+
+const HeaderName = (props) => {
     const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
-  function handleErrors(response) {
-    console.log("ERROR", response);
-    if (!response.ok) {
-    }else if(Array.isArray(response.json()) != true){
-      throw Error(response.statusText);
-      
-    }
-    return response;
-  }
+
   const fetchedDataFunc = () => {
     setLoading(true);
     try {
@@ -21,16 +16,15 @@ const HeaderName = () => {
           method: "GET",
         }
       )
-      // .then(handleErrors)
         .then((res) => {
           setLoading(false);
           return res.json();
         })
         .then((result) => {
-            console.log("SCREEN3NAMELIST",result)
           if(Array.isArray(result)===true){
             setFectchedData(result);
-
+            props.updateQRCodeFunc(result[0]["qr_code"])
+            console.log("QRCODE SETTING",result[0]["qr_code"])
           }
         })
 
@@ -63,5 +57,9 @@ const HeaderName = () => {
         </div>
     )
 }
-
-export default HeaderName
+const mapDispatchToProps = (dispatch) => {
+  return {
+   updateQRCodeFunc: (updatedQRCode)=>dispatch(setQRCodeFunc(updatedQRCode))
+  };
+};
+export default  connect(null,mapDispatchToProps)(HeaderName)

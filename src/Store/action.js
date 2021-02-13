@@ -4,6 +4,8 @@ import {
   FILE_SENT,
   FILE_SENT_FAILURE,
   FILE_UPLOADING,
+  FETCH_AGAIN,
+  SET_QRCODE
 } from "./actionTypes";
 
 export const addFiles = (files) => {
@@ -46,6 +48,7 @@ export const fileSubmitting = (files) => {
       requestOptions
     )
       .then((response) => {
+        dispatch(fetchingAgain(true))
         dispatch(fileSent());
       })
       .catch((error) => {
@@ -64,3 +67,19 @@ export const fileSentFailure = () => {
     type: FILE_SENT_FAILURE,
   };
 };
+
+export const fetchingAgain = (fetchingStatus)=>{
+  return{
+    type:FETCH_AGAIN,
+    fetchingStatus:fetchingStatus
+  }
+}
+
+
+
+export const setQRCodeFunc = (QRCODE)=>{
+  return{
+    type:SET_QRCODE,
+    updatedQRCode:QRCODE
+  }
+}

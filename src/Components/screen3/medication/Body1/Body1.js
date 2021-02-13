@@ -3,8 +3,9 @@ import telephoneS3 from "../../../../AllIcons/telephoneS3.png";
 import CircularIcon from "../../../CircularIcon/CircularIcon";
 import Body1List from "./Body1List/Body1List";
 import "./Body1.css";
+import { connect } from "react-redux";
 import CustomButton1 from "../../../Buttons/customButton1/CustomButton1";
-const Body1 = () => {
+const Body1 = (props) => {
   const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
   const fetchedDataFunc = () => {
@@ -12,7 +13,7 @@ const Body1 = () => {
       var requestOptions = {
         method: "POST",
         body: JSON.stringify({
-          "qr_code": "JSWJZU"
+          "qr_code": props.qrCode
         }),
         
         headers: { "content-type": "application/x-www-form-urlencoded" },
@@ -26,8 +27,7 @@ const Body1 = () => {
           return res.json();
         })
         .then((result) => {
-          
-          // console.log("MedicalResponse",result);
+          console.log("MEDICATION RESULT",result)
           if (Array.isArray(result) === true) {
             setFectchedData(result);
           }
@@ -36,9 +36,13 @@ const Body1 = () => {
       console.log("ERROR OCCURED", err);
     }
   };
+  let qrCode = props.qrCode
+  console.log("QRCODE_FETCHED",qrCode);
   useEffect(() => {
-    fetchedDataFunc();
-  }, []);
+   if(qrCode !== ''){
+     fetchedDataFunc();
+   }
+  }, [qrCode]);
   let renderedData = [];
 
   renderedData = fetchedData.map((item, index) => {
@@ -86,4 +90,11 @@ const Body1 = () => {
   );
 };
 
-export default Body1;
+const mapStateToProps = (state) => {
+  return {
+    qrCode:state.QRCode
+  };
+};
+
+
+export default  connect(mapStateToProps,null)(Body1);
