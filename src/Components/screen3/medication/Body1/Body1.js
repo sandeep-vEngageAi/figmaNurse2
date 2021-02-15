@@ -16,18 +16,16 @@ const Body1 = (props) => {
           "qr_code": props.qrCode
         }),
         
-        headers: { "content-type": "application/x-www-form-urlencoded" },
+        // headers: { "content-type": "application/x-www-form-urlencoded" },
       };
     try {
       fetch(
         `${process.env.REACT_APP_SCREEN2_URL}/api/v1/getPatientMedicineDetails`,requestOptions)
         .then((res) => {
           setLoading(false);
-          console.log(res);
           return res.json();
         })
         .then((result) => {
-          console.log("MEDICATION RESULT",result)
           if (Array.isArray(result) === true) {
             setFectchedData(result);
           }
@@ -37,7 +35,6 @@ const Body1 = (props) => {
     }
   };
   let qrCode = props.qrCode
-  console.log("QRCODE_FETCHED",qrCode);
   useEffect(() => {
    if(qrCode !== ''){
      fetchedDataFunc();

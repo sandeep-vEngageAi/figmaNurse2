@@ -4,7 +4,6 @@ import column2ImageS3 from "../../../AllIcons/column2ImageS3.png";
 import { connect } from "react-redux";
 
 const Scree3Column2 = (props) => {
-  console.log("IMAGESSHOWING", props.selectedFile);
   return (
     <div className="screen3__column2">
       <div className="screen3__column2__header">

@@ -9,14 +9,7 @@ import "./Screen2.css";
 const Screen2 = (props) => {
   const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
-  function handleErrors(response) {
-    console.log("ERROR", response);
-    if (!response.ok) {
-    } else if (Array.isArray(response.json()) != true) {
-      throw Error(response.statusText);
-    }
-    return response;
-  }
+  
   const fetchedDataFunc = () => {
     setLoading(true);
     try {
@@ -25,7 +18,6 @@ const Screen2 = (props) => {
       })
         .then((res) => {
           setLoading(false);
-          console.log(res);
           return res.json();
         })
         .then((result) => {

@@ -29,7 +29,6 @@ export const filesAdded = (add) => {
 
 
 export const fileSubmitting = (files) => {
-  console.log("FILESUBMITING", files);
   return (dispatch) => {
    
     //currently sending
@@ -44,10 +43,11 @@ export const fileSubmitting = (files) => {
     };
 
     fetch(
-      `${process.env.REACT_APP_SCREEN1_URL}/api/v1/uploadfile`,
+      `${process.env.REACT_APP_SCREEN1_URL}/api/v1/sendFile`,
       requestOptions
     )
       .then((response) => {
+        alert("FILESENT")
         dispatch(fetchingAgain(true))
         dispatch(fileSent());
       })

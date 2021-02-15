@@ -4,17 +4,23 @@ import { connect } from "react-redux";
 import {setQRCodeFunc} from '../../../../Store/action';
 
 const HeaderName = (props) => {
-    const [fetchedData, setFectchedData] = useState([]);
+  const [fetchedData, setFectchedData] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  
   const fetchedDataFunc = () => {
     setLoading(true);
+    props.updateQRCodeFunc(props.qrCode)
+    var requestOptions = {
+      method: "POST",
+      body: JSON.stringify({
+        "qr_code": props.qrCode
+      }),
+      
+    };
     try {
       fetch(
-        `${process.env.REACT_APP_SCREEN2_URL}/api/v1//getLastPatientDetails`,
-        {
-          method: "GET",
-        }
+        `${process.env.REACT_APP_SCREEN2_URL}/api/v1/getSinglePatient`,
+        requestOptions
       )
         .then((res) => {
           setLoading(false);
@@ -23,8 +29,6 @@ const HeaderName = (props) => {
         .then((result) => {
           if(Array.isArray(result)===true){
             setFectchedData(result);
-            props.updateQRCodeFunc(result[0]["qr_code"])
-            console.log("QRCODE SETTING",result[0]["qr_code"])
           }
         })
 

@@ -14,9 +14,9 @@ function App() {
     routes = (
       <Switch>
         <Route path="/ds-upload" component={Screen2} />
-        <Route path="/monitoring-capsule" component={Screen3} />
-        <Route path="/" component={Screen1} />
-        <Redirect to="/" />
+        <Route path="/monitoring-capsule/:id" component={Screen3} />
+        <Route path="/dashboard" component={Screen1} />
+        <Redirect to="/dashboard" />
       </Switch>
     );
   }

@@ -20,7 +20,6 @@ const RoutineCalls = () => {
           return res.json();
         })
         .then((result) => {
-          console.log("DISCHARGE", result);
           if(Array.isArray(result)===true){
             setFectchedData(result);
 
@@ -43,6 +42,7 @@ const RoutineCalls = () => {
         dischargeDate={item["dischargeDate"]}
         dischargeDiagnosis={item["diagnosis"]}
         department={item["department"]}
+        qrCode ={item["qrCode"]}
       />
     );
   });

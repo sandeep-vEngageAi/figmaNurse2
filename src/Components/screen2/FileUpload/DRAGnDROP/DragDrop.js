@@ -8,6 +8,8 @@ import SelectFiles from "./FileSelection/SelectFiles";
 import { connect } from "react-redux";
 import { addFiles, filesAdded } from "../../../../Store/action";
 import doneS2 from '../../../../AllIcons/doneS2.png';
+import { fetchingAgain } from "../../../../Store/action";
+
 const DragDrop = (props) => {
   const [isDropZoneActive, setIsDropZoneActive] = useState(false);
   const [imageSource, setImageSource] = useState("");
@@ -34,7 +36,6 @@ const DragDrop = (props) => {
 
   function onUploaded(e) {
     const file = e.file;
-    console.log("FILE HAVE A LOOK",file)
     setImageSource(file);
    
 
@@ -42,28 +43,39 @@ const DragDrop = (props) => {
     setProgressVisible(false);
     setProgressValue(0);
   }
-
+  
   function onProgress(e) {
     setProgressValue((e.bytesLoaded / e.bytesTotal) * 100);
   }
-
+  
   function onUploadStarted() {
     setImageSource("");
     setProgressVisible(true);
   }
-
+  
   const storeFilesToRedux = () => {
-    console.log("FILES", imageSource);
     props.filesAddFunc(imageSource);
     props.filesAddedStatusFunc(true);
     setUploadingToRedux(false);
     setFiles([]);
   };
+  const fileUploadedStatusRevertBackToNormal=()=>{
+    setImageSource("");
+    setTextVisible(true);
+    
+}
   useEffect(() => {
     if (imageSource) {
       storeFilesToRedux();
     }
   }, [imageSource]);
+  let uploadStatus = props.uploadStatus;
+  useEffect(() => {
+    if(uploadStatus ===true){
+      fileUploadedStatusRevertBackToNormal();
+      props.uploadStatusToFalseFunc(false)
+    }
+  }, [uploadStatus]);
   console.log("IMAGE SOURCE", imageSource);
   return (
     <div className="widget-container flex-box">
@@ -112,14 +124,17 @@ const DragDrop = (props) => {
 };
 const mapStateToProps = (state) =>{
   return{
-
+    uploadStatus: state.fetchAgain,
+    
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
     filesAddFunc: (files) => dispatch(addFiles(files)),
     filesAddedStatusFunc: (status) => dispatch(filesAdded(status)),
+    uploadStatusToFalseFunc: () => dispatch(fetchingAgain(false)),
   };
 };
 
-export default connect(null, mapDispatchToProps)(DragDrop);
+
+export default connect(mapStateToProps, mapDispatchToProps)(DragDrop);
